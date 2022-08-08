@@ -1,15 +1,16 @@
 // MAPA
 $paleta__colores:(
     azul: #1124f2,
-    shadowazul: #0000B2,
     verde: #49d70b,
-    shadowverde: #008200,
     naranja: #fb5c04,
     rosa: #eb0ea7,
 );
 
-// VARIABLE
+// VARIABLES
 $font: Helvetica, Arial, sans-serif;
+$shadowazul: #0000B2;
+$shadowverde: #008200;
+$shadownaranja: #AD0B00;
 
 // MIXIN - Es similar a una función, declaramos una FUNCIONALIDAD. Se invoca a través del @include, espacio nombre del mixin + entre paréntesis agregar los valores de esas variales declaradas, separados por una coma.
 @mixin myp ($m,$p){
@@ -38,13 +39,13 @@ html {
 }
 
 .navbar-light .navbar-brand {
-    color: #1124f2;
+    color: map-get($map: $paleta__colores, $key: azul);
     font-size: 40px;
-    text-shadow: 4px 4px 3px #0000B2;
+    text-shadow: 4px 4px 3px $shadowazul;
 
     &:hover {
-        color: #1124f2;
-        text-shadow: 4px 4px 3px #0000B2;
+        color: map-get($map: $paleta__colores, $key: azul);
+        text-shadow: 4px 4px 3px $shadowazul;
     }
 }
 
@@ -56,26 +57,26 @@ html {
     &:hover{
         border: 1.5px solid;
         border-radius: 35px;
-        border-color: #1124f2;
-        text-shadow: 3px 3px 3px #008200;
+        color: map-get($map: $paleta__colores, $key: azul);
+        text-shadow: 3px 3px 3px $shadowazul;
         @include myp(0,8px);
         transition: all 0.3s ease;
     }
 }
 
 .nav-link{
-    text-shadow: 4px 4px 3px #0000B2;
+    text-shadow: 4px 4px 3px $shadowazul;
 }
 
 .bg-light {
     background-color:#49d70b !important;
-    box-shadow: 4px 4px 6px #008200;
+    box-shadow: 4px 4px 6px $shadowverde;
     @include myp(0,20px);
 }
 
 .navbar-light .navbar-toggler {
-    border-color: #1124f2;
-    box-shadow: 4px 4px 4px #0000B2;
+    border-color: map-get($map: $paleta__colores, $key: azul);
+    box-shadow: 4px 4px 4px $shadowazul;
 }
 
 #redesNav {
@@ -89,7 +90,7 @@ html {
     gap: 10px;
     
     &#redesNav a {
-        color:#1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
         text-decoration: none;
         text-align: center;
     }
@@ -111,26 +112,26 @@ html {
 }
 
 .insta__nav:hover{
-    color: #1124f2;
-    text-shadow: 2px 2px 3px #0000B2;
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
     transition: all 0.5s ease;
 }
 
 .mail__nav:hover{
-    color: #1124f2;
-    text-shadow: 2px 2px 3px #0000B2;
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
     transition: all 0.5s ease;
 }
 
 .behance__nav:hover{
-    color: #1124f2;
-    text-shadow: 2px 2px 3px #0000B2;
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
     transition: all 0.5s ease;
 }
 
 .linkedin__nav:hover{
-    color: #1124f2;
-    text-shadow: 2px 2px 3px #0000B2;
+    color: map-get($map: $paleta__colores, $key: azul);
+    text-shadow: 2px 2px 3px $shadowazul;
     transition: all 0.5s ease;
 }
 
@@ -144,19 +145,19 @@ html {
 }
 
 h1 a {
-    color: #49d70b;
+    color: map-get($map: $paleta__colores, $key: verde);
     text-decoration: none;
-    text-shadow: 5px 5px 4px #008200;
+    text-shadow: 5px 5px 4px $shadowverde;
 
     &:hover {
         transition: all 0.5s ease;
-        color: #49d70b;
-        text-shadow: 3px 3px 3px #008200;
+        color: map-get($map: $paleta__colores, $key: verde);
+        text-shadow: 3px 3px 3px $shadowverde;
     }
 }
 
 .subtitulo {
-    color: #1124f2;
+    color: map-get($map: $paleta__colores, $key: azul);
     padding-bottom: 5px;
 }
 
@@ -165,12 +166,12 @@ h1 a {
 }
 
 .soy {
-    color: #eb0ea7;
+    color: map-get($map: $paleta__colores, $key: rosa);
     font-size: 18px;
     padding-bottom: 10px;
 
     &.soy span {
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
     }    
 }
 
@@ -179,18 +180,18 @@ h1 a {
 }
 
 .soyTexto {
-    color: #eb0ea7;
+    color: map-get($map: $paleta__colores, $key: rosa);
     font-size: 18px;
     @include myp(0,30px);
     text-align: justify;
 
     &.soyTexto span {
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
     }
 }
 
 h1 {
-    color: #49d70b;
+    color: map-get($map: $paleta__colores, $key: verde);
     padding-top: 10px;
 }
 
@@ -211,7 +212,7 @@ h1 {
 // ACÁ DECLARO LA CLASS DEL EXTEND QUE DESPUÉS VOY A USAR. LA USÉ 2 VECES EN DIFERENTES PARTES
 .saludo__verde{
     padding-left: 20px;
-    text-shadow: 4px 4px 4px #008200;
+    text-shadow: 4px 4px 4px $shadowverde;
     margin-top: 140px;
 }
 // FIN DE LA CLASS DEL EXTEND
@@ -221,26 +222,26 @@ h1 {
 }
 
 .aboutMe {
-    color: #eb0ea7;
+    color: map-get($map: $paleta__colores, $key: rosa);
     font-size: 18px;
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 10px;
 
     &.aboutMe span {
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
     }
 }
 
 .aboutMeText {
-    color: #eb0ea7;
+    color: map-get($map: $paleta__colores, $key: rosa);
     font-size: 20px;
     @include myp(0,30px);
     text-align: justify;
     line-height: 36px;
 
     &.aboutMeText span {
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
     }    
 }
 
@@ -252,9 +253,9 @@ h1 {
 
     &#linkedin a {
         text-decoration: none;
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
         font-size: 20px;
-        text-shadow: 2px 2px 3px #0000B2;
+        text-shadow: 2px 2px 3px $shadowazul;
         text-align: justify;
     }
 }
@@ -266,9 +267,9 @@ h1 {
 
     &#mail a {
         text-decoration: none;
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
         font-size: 20px;
-        text-shadow: 2px 2px 3px #0000B2;
+        text-shadow: 2px 2px 3px $shadowazul;
         text-align: justify;
     }
 }
@@ -277,8 +278,8 @@ h1 {
 /* Sección: Inspo - Inicio */
 
 .TitleInspo{
-    color: #49d70b;
-    text-shadow: 4px 4px 4px #008200;
+    color: map-get($map: $paleta__colores, $key: verde);
+    text-shadow: 4px 4px 4px $shadowverde;
     font-size: 2rem;
     padding: 20px 30px 20px 30px;
 }
@@ -289,12 +290,12 @@ h1 {
 
 .inspoText {
     @include myp(0,20px);
-    color: #eb0ea7;
+    color: map-get($map: $paleta__colores, $key: rosa);
     font-size: 20px;
     text-align: justify;
 
     &.inspoText span {
-        color: #1124f2;
+        color: map-get($map: $paleta__colores, $key: azul);
     }
 }
 
@@ -305,7 +306,7 @@ h1 {
 
 .artistasInspo {
     padding-left: 20px;
-    color: #eb0ea7;
+    color: map-get($map: $paleta__colores, $key: rosa);
     font-size: 18px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -313,8 +314,8 @@ h1 {
     text-align: justify;
 
     &.artistasInspo span {
-        color: #fb5c04;
-        text-shadow: 4px 4px 4px #AD0B00;
+        color: map-get($map: $paleta__colores, $key: naranja);
+        text-shadow: 4px 4px 4px $shadownaranja;
         letter-spacing: 1.5px;
     }
 }
@@ -324,7 +325,7 @@ h1 {
 /* Footer inicio */
 
 footer {
-    color: #1124f2;
+    color: map-get($map: $paleta__colores, $key: azul);
     min-height: 50px;
     width: 100%;
     padding-top: 40px;
@@ -343,14 +344,14 @@ footer {
     justify-content: space-evenly;
     font-size: 20px;
     border-radius: 15px;
-    border: 2px solid #49d70b;
+    border: 2px solid map-get($map: $paleta__colores, $key: verde);
     padding: 30px 0;
     margin: 0 10px;
 
     &#redes a {
-        color: #49d70b;
+        color: map-get($map: $paleta__colores, $key: verde);
         text-decoration: none;
-        text-shadow: 3px 3px 3px #008200;
+        text-shadow: 3px 3px 3px $shadowverde;
         text-align: center;
     }
 
@@ -384,7 +385,7 @@ footer {
     right: 30px;
     text-align: center;
     font-size: 30px;
-    text-shadow: 5px 5px 5px #008200;
+    text-shadow: 5px 5px 5px $shadowverde;
 }
 
 /* botón UP fin */
