@@ -52,19 +52,19 @@ html {
     color: #1124f2 !important;
     font-size: 1.3rem;
     text-transform: uppercase;
+    
+    &:hover{
+        border: 1.5px solid;
+        border-radius: 35px;
+        border-color: #1124f2;
+        text-shadow: 3px 3px 3px #008200;
+        @include myp(0,8px);
+        transition: all 0.3s ease;
+    }
 }
 
 .nav-link{
     text-shadow: 4px 4px 3px #0000B2;
-}
-
-.navbar-nav a:hover {
-    border: 1.5px solid;
-    border-radius: 35px;
-    border-color: #1124f2;
-    text-shadow: 3px 3px 3px #008200;
-    @include myp(0,8px);
-    transition: all 0.3s ease;
 }
 
 .bg-light {
@@ -87,27 +87,27 @@ html {
     margin-top: 30px;
     padding: 20px 0px 20px 0px;
     gap: 10px;
-}
+    
+    &#redesNav a {
+        color:#1124f2;
+        text-decoration: none;
+        text-align: center;
+    }
 
-#redesNav a {
-    color:#1124f2;
-    text-decoration: none;
-    text-align: center;
-}
+    &#redesNav i {
+        font-size: 1.5rem;
+    }
 
-#redesNav i {
-    font-size: 1.5rem;
+    &#redesNav p {
+        font-size: 17px;
+        align-items: center;
+    }
 }
 
 .nav__iconos {
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
-
-#redesNav p {
-    font-size: 17px;
-    align-items: center;
 }
 
 .insta__nav:hover{
@@ -147,12 +147,12 @@ h1 a {
     color: #49d70b;
     text-decoration: none;
     text-shadow: 5px 5px 4px #008200;
-}
 
-h1 a:hover {
-    transition: all 0.5s ease;
-    color: #49d70b;
-    text-shadow: 3px 3px 3px #008200;
+    &:hover {
+        transition: all 0.5s ease;
+        color: #49d70b;
+        text-shadow: 3px 3px 3px #008200;
+    }
 }
 
 .subtitulo {
@@ -168,10 +168,10 @@ h1 a:hover {
     color: #eb0ea7;
     font-size: 18px;
     padding-bottom: 10px;
-}
 
-.soy span {
-    color: #1124f2;
+    &.soy span {
+        color: #1124f2;
+    }    
 }
 
 .img-fluid {
@@ -183,10 +183,10 @@ h1 a:hover {
     font-size: 18px;
     @include myp(0,30px);
     text-align: justify;
-}
 
-.soyTexto span {
-    color: #1124f2;
+    &.soyTexto span {
+        color: #1124f2;
+    }
 }
 
 h1 {
@@ -226,10 +226,10 @@ h1 {
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 10px;
-}
 
-.aboutMe span {
-    color: #1124f2;
+    &.aboutMe span {
+        color: #1124f2;
+    }
 }
 
 .aboutMeText {
@@ -238,10 +238,10 @@ h1 {
     @include myp(0,30px);
     text-align: justify;
     line-height: 36px;
-}
 
-.aboutMeText span {
-    color: #1124f2;
+    &.aboutMeText span {
+        color: #1124f2;
+    }    
 }
 
 #linkedin {
@@ -249,28 +249,28 @@ h1 {
     margin-bottom: 10px;
     margin-left: 40px;
     margin-right: 50px;
-}
 
-#linkedin a {
-    text-decoration: none;
-    color: #1124f2;
-    font-size: 20px;
-    text-shadow: 2px 2px 3px #0000B2;
-    text-align: justify;
+    &#linkedin a {
+        text-decoration: none;
+        color: #1124f2;
+        font-size: 20px;
+        text-shadow: 2px 2px 3px #0000B2;
+        text-align: justify;
+    }
 }
 
 #mail {
     padding-top: 20px;
     margin-bottom: 10px;
     margin-left: 40px;
-}
 
-#mail a {
-    text-decoration: none;
-    color: #1124f2;
-    font-size: 20px;
-    text-shadow: 2px 2px 3px #0000B2;
-    text-align: justify;
+    &#mail a {
+        text-decoration: none;
+        color: #1124f2;
+        font-size: 20px;
+        text-shadow: 2px 2px 3px #0000B2;
+        text-align: justify;
+    }
 }
 
 /* Sección: Sobre mi - Fin */
@@ -292,15 +292,15 @@ h1 {
     color: #eb0ea7;
     font-size: 20px;
     text-align: justify;
+
+    &.inspoText span {
+        color: #1124f2;
+    }
 }
 
 .boxArtists h2 {
     text-align: center;
     @include myp(15px,0);;
-}
-
-.inspoText span {
-    color: #1124f2;
 }
 
 .artistasInspo {
@@ -311,12 +311,12 @@ h1 {
     padding-bottom: 10px;
     margin-right: 20px;
     text-align: justify;
-}
 
-.artistasInspo span {
-    color: #fb5c04;
-    text-shadow: 4px 4px 4px #AD0B00;
-    letter-spacing: 1.5px;
+    &.artistasInspo span {
+        color: #fb5c04;
+        text-shadow: 4px 4px 4px #AD0B00;
+        letter-spacing: 1.5px;
+    }
 }
 
 /* Sección: Inspo - Fin */
@@ -329,6 +329,11 @@ footer {
     width: 100%;
     padding-top: 40px;
     text-align: center;
+
+    footer p {
+        font-size: 17px;
+        align-items: center;
+    }
 }
 
 #redes {
@@ -341,28 +346,23 @@ footer {
     border: 2px solid #49d70b;
     padding: 30px 0;
     margin: 0 10px;
-}
 
-#redes a {
-    color: #49d70b;
-    text-decoration: none;
-    text-shadow: 3px 3px 3px #008200;
-    text-align: center;
-}
+    &#redes a {
+        color: #49d70b;
+        text-decoration: none;
+        text-shadow: 3px 3px 3px #008200;
+        text-align: center;
+    }
 
-#redes i {
-    font-size: 2rem;
+    &#redes i {
+        font-size: 2rem;
+    }
 }
 
 .footer__iconos {
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
-
-footer p {
-    font-size: 17px;
-    align-items: center;
 }
 
 #copy {

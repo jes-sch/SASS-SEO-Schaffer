@@ -30,11 +30,6 @@ html {
   font-size: 1.3rem;
   text-transform: uppercase;
 }
-
-.nav-link {
-  text-shadow: 4px 4px 3px #0000B2;
-}
-
 .navbar-nav a:hover {
   border: 1.5px solid;
   border-radius: 35px;
@@ -43,6 +38,10 @@ html {
   margin: 0;
   padding: 8px;
   transition: all 0.3s ease;
+}
+
+.nav-link {
+  text-shadow: 4px 4px 3px #0000B2;
 }
 
 .bg-light {
@@ -67,26 +66,23 @@ html {
   padding: 20px 0px 20px 0px;
   gap: 10px;
 }
-
-#redesNav a {
+#redesNav#redesNav a {
   color: #1124f2;
   text-decoration: none;
   text-align: center;
 }
-
-#redesNav i {
+#redesNav#redesNav i {
   font-size: 1.5rem;
+}
+#redesNav#redesNav p {
+  font-size: 17px;
+  align-items: center;
 }
 
 .nav__iconos {
   display: flex;
   flex-direction: row;
   gap: 10px;
-}
-
-#redesNav p {
-  font-size: 17px;
-  align-items: center;
 }
 
 .insta__nav:hover {
@@ -126,7 +122,6 @@ h1 a {
   text-decoration: none;
   text-shadow: 5px 5px 4px #008200;
 }
-
 h1 a:hover {
   transition: all 0.5s ease;
   color: #49d70b;
@@ -148,8 +143,7 @@ h1 a:hover {
   font-size: 18px;
   padding-bottom: 10px;
 }
-
-.soy span {
+.soy.soy span {
   color: #1124f2;
 }
 
@@ -164,8 +158,7 @@ h1 a:hover {
   padding: 30px;
   text-align: justify;
 }
-
-.soyTexto span {
+.soyTexto.soyTexto span {
   color: #1124f2;
 }
 
@@ -200,8 +193,7 @@ h1 {
   padding-top: 15px;
   padding-bottom: 10px;
 }
-
-.aboutMe span {
+.aboutMe.aboutMe span {
   color: #1124f2;
 }
 
@@ -213,8 +205,7 @@ h1 {
   text-align: justify;
   line-height: 36px;
 }
-
-.aboutMeText span {
+.aboutMeText.aboutMeText span {
   color: #1124f2;
 }
 
@@ -224,8 +215,7 @@ h1 {
   margin-left: 40px;
   margin-right: 50px;
 }
-
-#linkedin a {
+#linkedin#linkedin a {
   text-decoration: none;
   color: #1124f2;
   font-size: 20px;
@@ -238,8 +228,7 @@ h1 {
   margin-bottom: 10px;
   margin-left: 40px;
 }
-
-#mail a {
+#mail#mail a {
   text-decoration: none;
   color: #1124f2;
   font-size: 20px;
@@ -263,15 +252,14 @@ h1 {
   font-size: 20px;
   text-align: justify;
 }
+.inspoText.inspoText span {
+  color: #1124f2;
+}
 
 .boxArtists h2 {
   text-align: center;
   margin: 15px;
   padding: 0;
-}
-
-.inspoText span {
-  color: #1124f2;
 }
 
 .artistasInspo {
@@ -283,8 +271,7 @@ h1 {
   margin-right: 20px;
   text-align: justify;
 }
-
-.artistasInspo span {
+.artistasInspo.artistasInspo span {
   color: #fb5c04;
   text-shadow: 4px 4px 4px #AD0B00;
   letter-spacing: 1.5px;
@@ -300,6 +287,10 @@ footer {
   padding-top: 40px;
   text-align: center;
 }
+footer footer p {
+  font-size: 17px;
+  align-items: center;
+}
 
 #redes {
   text-decoration: none;
@@ -312,15 +303,13 @@ footer {
   padding: 30px 0;
   margin: 0 10px;
 }
-
-#redes a {
+#redes#redes a {
   color: #49d70b;
   text-decoration: none;
   text-shadow: 3px 3px 3px #008200;
   text-align: center;
 }
-
-#redes i {
+#redes#redes i {
   font-size: 2rem;
 }
 
@@ -328,11 +317,6 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 10px;
-}
-
-footer p {
-  font-size: 17px;
-  align-items: center;
 }
 
 #copy {
